@@ -16,26 +16,36 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <h1>Berlin</h1>
-        <ul>
-          <li>Tuesday 03:00</li>
-          <li>Clear Sky</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Ckear Sky"
-            />
-            24ºC | ºF
-          </div>
-          <div class="col-6">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="overview">
+            <h1>Berlin</h1>
             <ul>
-              <li>Precipitation : 0%</li>
-              <li>Humidity : 70%</li>
-              <li>Wind : 2km/h</li>
+              <li>Tuesday 03:00</li>
+              <li>Clear Sky</li>
             </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                  alt="Ckear Sky"
+                  class="float-left"
+                />
+                <span class="float-left"
+                  ><strong>24</strong
+                  ><span class="units">ºC | <a href="#">ºF</a></span></span
+                >
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation : 0%</li>
+                <li>Humidity : 70%</li>
+                <li>Wind : 2km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
         <small>
