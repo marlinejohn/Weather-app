@@ -43,9 +43,17 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].descriptiong);
 }
+function search(city) {
+  let apiKey = "cf7e06fd5931209278b90bb80e2b393a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}`).then(showTemperature);
+}
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+search("Berlin");
 
-let apiKey = "cf7e06fd5931209278b90bb80e2b393a";
-let city = "Berlin";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-axios.get(`${apiUrl}`).then(showTemperature);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
