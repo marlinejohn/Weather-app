@@ -1,16 +1,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(
-    180.3deg,
-    rgb(221, 221, 221) 5.5%,
-    rgb(110, 136, 161) 90.2%
-  );
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 h1 {
-  color: rgb(43, 41, 41);
+  color: rgb(134, 127, 127);
   font-size: 28px;
   font-weight: 100px;
   line-height: 25px;
@@ -22,7 +15,7 @@ ul {
 }
 li {
   list-style: none;
-  color: rgb(43, 41, 41);
+  color: rgb(118, 112, 112);
   font-size: 18px;
   font-weight: 100px;
   line-height: 18px;
@@ -31,12 +24,16 @@ li:first-letter {
   text-transform: capitalize;
 }
 .weather-app-wrapper {
-  max-width: 800px;
+  max-width: 600px;
   margin: 20px auto;
 }
 .weather-app {
   padding: 20px;
   border: 2px solid rgb(116, 111, 111);
+  border-radius: 10px;
+  background-image: url(https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80);
+  background-size: cover;
+  background-blend-mode: darken;
   border-radius: 10px;
 }
 .overview {
@@ -45,23 +42,47 @@ li:first-letter {
 .weather-temperature img {
   height: 50px;
   margin-right: 8px;
-  width: 50px;
+  margin-left: 0px;
   margin-top: -20px;
+  padding: 0px;
+  width: 50px;
 }
+
 .weather-temperature strong {
-  font-size: 45px;
+  font-size: 42px;
   line-height: 1;
+  color: rgb(97, 92, 92);
 }
 .weather-temperature .units {
   font-size: 16px;
   position: relative;
-  top: -20px;
+  top: -18px;
   left: 5px;
 }
 .weather-temperature .active {
-  color: rgb(43, 41, 41);
+  color: rgb(111, 106, 106);
   cursor: default;
 }
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+.properties {
+  text-align: right;
+  line-height: 20px;
+}
+.weather-forecast {
+  margin-top: 25px;
+  text-align: center;
+}
+.weather-forecast-day {
+  font-size: 18px;
+  color: rgb(118, 112, 112);
+  opacity: 0.8;
+}
+.weather-forecast-temperatures {
+  font-size: 15px;
+  color: rgb(104, 99, 99);
+}
+.weather-forecast-min {
+  opacity: 0.5;
 }
